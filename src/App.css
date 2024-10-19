@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
 }
 
 .App-logo {
@@ -7,14 +9,10 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+@media (prefers-reduced-motion: no-preference) {}
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1e2a38;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +20,34 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #1e2a38;
+  padding: 10px 20px;
+}
+
+.nav-logo {
+  width: 150px;
+  border-radius: 5px;
+  margin-right: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.nav-links li {
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links li:hover {
+  text-decoration: underline;
 }
 
 .App-link {
@@ -36,3 +62,196 @@
     transform: rotate(360deg);
   }
 }
+
+.books-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.book-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.book-authors {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.book-card .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 20px;
+}
+
+.book-card .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.search-options {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+.book-img-container {
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.no-results-msg {
+  color: #ff4c4c;
+  font-size: 1.5rem;
+}
+
+.book-genre {
+  font-size: 0.9rem;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (min-width: 1200px) {
+  .book-card {
+    width: 23%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .book-card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 992px) {
+  .book-card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .book-img {
+    height: 150px;
+  }
+
+  .book-title {
+    font-size: 1rem;
+  }
+
+  .book-authors {
+    font-size: 0.8rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .book-img {
+    height: 120px;
+  }
+
+  .book-card {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .book-title {
+    font-size: 0.9rem;
+  }
+
+  .book-authors {
+    font-size: 0.75rem;
+  }
+
+  .pagination {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .search-input {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+.custom-navbar {
+  background-color: #4a90e2; 
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
